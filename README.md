@@ -1,6 +1,6 @@
-# Backend NextJS - Marketplace 
+# Marketplace - Painel de Vendedor
 
-Link para acessar o front: https://mba-fullstack-rocketseat.netlify.app/
+Link para acessar o app: https://mba-fullstack-rocketseat.netlify.app/
 
 Sistema de gerenciamento de produtos para vendedores com autenticação e upload de imagens.
 
