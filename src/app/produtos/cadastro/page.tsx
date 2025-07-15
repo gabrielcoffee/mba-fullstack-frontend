@@ -46,7 +46,14 @@ export default function CadastroProdutosPage() {
         return data.imageUrl;
     };
 
-    const createProduct = async (productData: any) => {
+    const createProduct = async (productData: {
+        title: string;
+        description: string;
+        category: string;
+        price: number;
+        imageUrl: string;
+        status: string;
+    }) => {
         const token = localStorage.getItem('authToken');
         
         const response = await fetch(`${BASE_URL}/products`, {

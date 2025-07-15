@@ -22,11 +22,6 @@ export default function ListaProdutosPage() {
     const [showTooltip, setShowTooltip] = useState(false);
     const [hoverTimer, setHoverTimer] = useState<NodeJS.Timeout | null>(null);
 
-    if (typeof window !== 'undefined' && !isAuthenticated()) {
-        window.location.href = '/login';
-        return null;
-    }
-
     const carregarProdutos = async () => {
         try {
             setLoading(true);
@@ -48,6 +43,10 @@ export default function ListaProdutosPage() {
     };
 
     useEffect(() => {
+        if (typeof window !== 'undefined' && !isAuthenticated()) {
+            window.location.href = '/login';
+            return;
+        }
         carregarProdutos();
     }, []);
 

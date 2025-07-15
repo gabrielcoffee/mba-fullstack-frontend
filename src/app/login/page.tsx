@@ -20,7 +20,7 @@ export default function LoginPage() {
         try {
             await login(email, password);
             window.location.href = '/produtos';
-        } catch (err) {
+        } catch {
             setError('E-mail ou senha inválidos');
         }
     };
